@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>袁锦程 · 会计学本科简历</title>
+    <style>
+        /* 样式与上一版一致，未作改动（仅修改文本内容） */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: #f2f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .card {
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px -12px rgba(17, 34, 68, 0.2);
+            overflow: hidden;
+            border: 1px solid #e3eaf2;
+        }
+
+        .lang-bar {
+            background: #f9fcff;
+            padding: 0.8rem 2.2rem;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 1px solid #dde5ef;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid #a5bbd0;
+            padding: 0.4rem 1.5rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1f3a57;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-left: 0.5rem;
+        }
+
+        .lang-btn.active {
+            background: #1e3b5c;
+            border-color: #1e3b5c;
+            color: white;
+        }
+
+        .lang-btn:hover {
+            background: #dee8f2;
+            border-color: #7b99b8;
+        }
+
+        .content {
+            padding: 2.4rem 2.8rem;
+        }
+
+        .name-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid #e9eff6;
+            padding-bottom: 0.8rem;
+        }
+
+        .name {
+            font-size: 2.8rem;
+            font-weight: 650;
+            color: #092135;
+            letter-spacing: -0.5px;
+        }
+
+        .badge {
+            background: #e7eef7;
+            color: #1e405e;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.2rem 1.8rem;
+            background: #f8fbfe;
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #dde7f0;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .info-icon {
+            font-size: 1.3rem;
+            min-width: 30px;
+            color: #2b5b82;
+        }
+
+        .info-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #607d9b;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .info-value {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #0a253c;
+            word-break: break-word;
+        }
+
+        .research-block {
+            background: #eef4fa;
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.2rem;
+            border-left: 6px solid #254e77;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 650;
+            color: #0a273f;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1.2rem;
+        }
+
+        .chip-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.9rem;
+        }
+
+        .chip {
+            background: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #123654;
+            border: 1px solid #c6d6e9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: 0.1s;
+        }
+
+        .chip:hover {
+            background: #deeaf6;
+            border-color: #91b0cf;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            border: 1px solid #e0eaf3;
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: #193753;
+            font-size: 1rem;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.02);
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .skill-box, .edu-box {
+            background: #ffffff;
+            border: 1px solid #e0eaf3;
+            border-radius: 20px;
+            padding: 1.3rem 1.8rem;
+        }
+
+        .sub-title {
+            font-size: 1.1rem;
+            font-weight: 650;
+            color: #0f314b;
+            border-bottom: 1px dashed #cbdbea;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 0.8rem;
+        }
+
+        .skill-tag {
+            background: #e9f0f8;
+            color: #1f3d59;
+            padding: 0.3rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #c9daec;
+        }
+
+        .edu-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .edu-line {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-weight: 600;
+            color: #1d3c58;
+            margin-bottom: 0.3rem;
+        }
+
+        .edu-date {
+            color: #1e5782;
+            min-width: 120px;
+        }
+
+        .edu-school {
+            font-weight: 600;
+        }
+
+        .edu-detail {
+            color: #2b547a;
+            font-size: 0.95rem;
+            margin-left: 1.2rem;
+            margin-top: 0.2rem;
+            list-style-type: disc;
+        }
+
+        .course-hint {
+            margin-top: 0.4rem;
+            font-size: 0.9rem;
+            color: #456f94;
+            background: #f2f8ff;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .footer-update {
+            margin-top: 2.2rem;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 0.9rem;
+            color: #527a9e;
+            border-top: 1px solid #dae3ed;
+            padding-top: 1.2rem;
+        }
+
+        .lang-hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 700px) {
+            .content { padding: 1.5rem; }
+            .name { font-size: 2.2rem; }
+            .two-col { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="lang-bar">
+        <button class="lang-btn active" id="btn-zh" onclick="switchLang('zh')">中文</button>
+        <button class="lang-btn" id="btn-en" onclick="switchLang('en')">English</button>
+    </div>
+
+    <!-- 中文内容 -->
+    <div id="lang-zh" class="content lang-zh">
+        <div class="name-header">
+            <span class="name">袁锦程</span>
+            <span class="badge">会计学 · 本科</span>   <!-- 改为本科 -->
+        </div>
+
+        <div class="info-grid">
+            <div class="info-item"><span class="info-icon">🎓</span><div><div class="info-label">学校/专业</div><div class="info-value">华东政法大学 · 会计学</div></div></div>
+            <div class="info-item"><span class="info-icon">📧</span><div><div class="info-label">邮箱</div><div class="info-value">jincheng.yuan@hzu.edu.cn</div></div></div>
+            <div class="info-item"><span class="info-icon">🔬</span><div><div class="info-label">研究方向</div><div class="info-value">资本市场会计 · 公司治理</div></div></div>
+            <div class="info-item"><span class="info-icon">📍</span><div><div class="info-label">所在地</div><div class="info-value">上海 · 松江</div></div></div>
+        </div>
+
+        <div class="research-block">
+            <div class="section-title">📋 研究兴趣</div>
+            <div class="chip-cloud">
+                <span class="chip">资本市场与会计信息披露</span>
+                <span class="chip">公司治理与财务报告</span>
+                <span class="chip">管理会计与成本控制</span>
+                <span class="chip">审计与内部控制</span>
+                <span class="chip">税务筹划与合规</span>
+                <span class="chip">财务数字化与智能会计</span>
+                <span class="chip">环境/社会责任与碳会计 (ESG)</span>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <div style="font-weight:600; margin-bottom:8px;">📌 个人简介</div>
+            <div>华东政法大学会计学专业本科生。研究兴趣涵盖资本市场信息披露、公司治理、管理会计、审计内控、税务筹划、财务智能化及ESG会计。具备扎实的会计理论功底与计算机办公技能，善于运用数据分析工具解决财务问题。</div>
+        </div>
+
+        <div class="two-col">
+            <div class="skill-box">
+                <div class="sub-title">⚙️ 技能</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">办公软件 (Excel/PPT/Word)</span>
+                    <span class="skill-tag">Python 数据分析</span>
+                    <span class="skill-tag">R / Stata 统计</span>
+                    <span class="skill-tag">SQL 数据库查询</span>
+                    <span class="skill-tag">财务软件 (用友/金蝶)</span>
+                    <span class="skill-tag">学术写作</span>
+                </div>
+                <div style="margin-top:1rem; color:#3f6185; font-size:0.85rem;">• 计算机办公软件高级应用 • 相关计算机语言 (Python, R)</div>
+            </div>
+
+            <div class="edu-box">
+                <div class="sub-title">📚 教育经历</div>
+                <div class="edu-item">
+                    <div class="edu-line"><span class="edu-date">2024/9 – 2026/3</span><span class="edu-school">华东政法大学 商学院</span></div>
+                    <div style="font-weight:500; margin-left:1.2rem; color:#1a3f5e;">会计学专业 · 本科</div>   <!-- 明确本科 -->
+                    <div class="course-hint">主修课程：基础会计、中级财务会计、高级会计、成本管理、审计学、税法、财务管理、会计信息系统</div>
+                </div>
+                <div style="margin-top:0.8rem; color:#3c6286; font-size:0.9rem;"><i>课程经历涵盖会计、财务、审计、内控、计量经济学等</i></div>
+            </div>
+        </div>
+
+        <div class="footer-update">
+            <span class="update-icon">📅</span> 最后更新：2026年3月13日
+        </div>
+    </div>
+
+    <!-- 英文内容 (对应修改为本科) -->
+    <div id="lang-en" class="content lang-en lang-hidden">
+        <div class="name-header">
+            <span class="name">Jincheng Yuan</span>
+            <span class="badge">Accounting · Bachelor</span>   <!-- Bachelor -->
+        </div>
+
+        <div class="info-grid">
+            <div class="info-item"><span class="info-icon">🎓</span><div><div class="info-label">University/Major</div><div class="info-value">East China University of Political Science and Law · Accounting</div></div></div>
+            <div class="info-item"><span class="info-icon">📧</span><div><div class="info-label">Email</div><div class="info-value">jincheng.yuan@hzu.edu.cn</div></div></div>
+            <div class="info-item"><span class="info-icon">🔬</span><div><div class="info-label">Research Area</div><div class="info-value">Capital Market · Corp Governance</div></div></div>
+            <div class="info-item"><span class="info-icon">📍</span><div><div class="info-label">Location</div><div class="info-value">Shanghai · Songjiang</div></div></div>
+        </div>
+
+        <div class="research-block">
+            <div class="section-title">📋 Research Interests</div>
+            <div class="chip-cloud">
+                <span class="chip">Capital Market & Accounting Info Disclosure</span>
+                <span class="chip">Corporate Governance & Financial Reporting</span>
+                <span class="chip">Managerial Accounting & Cost Control</span>
+                <span class="chip">Auditing & Internal Control</span>
+                <span class="chip">Tax Planning & Compliance</span>
+                <span class="chip">Financial Digitalization & Intelligent Accounting</span>
+                <span class="chip">ESG & Carbon Accounting</span>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <div style="font-weight:600; margin-bottom:8px;">📌 Profile</div>
+            <div>Undergraduate student in Accounting at ECUPL. Research interests span capital market disclosure, corporate governance, management accounting, auditing, tax planning, financial digitalization, and ESG. Solid background in accounting theory and computer skills, adept at using data analytics to solve financial problems.</div>
+        </div>
+
+        <div class="two-col">
+            <div class="skill-box">
+                <div class="sub-title">⚙️ Skills</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">MS Office (Excel/PPT/Word)</span>
+                    <span class="skill-tag">Python for Data Analysis</span>
+                    <span class="skill-tag">R / Stata</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Accounting Software (UFIDA/Kingdee)</span>
+                    <span class="skill-tag">Academic Writing</span>
+                </div>
+                <div style="margin-top:1rem; color:#3f6185; font-size:0.85rem;">• Advanced computer office skills • Programming languages (Python, R)</div>
+            </div>
+
+            <div class="edu-box">
+                <div class="sub-title">📚 Education</div>
+                <div class="edu-item">
+                    <div class="edu-line"><span class="edu-date">2024/9 – 2026/3</span><span class="edu-school">ECUPL · Business School</span></div>
+                    <div style="font-weight:500; margin-left:1.2rem; color:#1a3f5e;">B.S. in Accounting</div>
+                    <div class="course-hint">Core courses: Financial Accounting, Cost Management, Auditing, Taxation, Financial Management, Accounting Information Systems</div>
+                </div>
+                <div style="margin-top:0.8rem; color:#3c6286; font-size:0.9rem;"><i>Courses include Accounting, Finance, Auditing, Internal Control, Econometrics, etc.</i></div>
+            </div>
+        </div>
+
+        <div class="footer-update">
+            <span class="update-icon">📅</span> Last updated: March 13, 2026
+        </div>
+    </div>
+</div>
+
+<script>
+    function switchLang(lang) {
+        const zhDiv = document.getElementById('lang-zh');
+        const enDiv = document.getElementById('lang-en');
+        const btnZh = document.getElementById('btn-zh');
+        const btnEn = document.getElementById('btn-en');
+
+        if (lang === 'zh') {
+            zhDiv.classList.remove('lang-hidden');
+            enDiv.classList.add('lang-hidden');
+            btnZh.classList.add('active');
+            btnEn.classList.remove('active');
+        } else {
+            enDiv.classList.remove('lang-hidden');
+            zhDiv.classList.add('lang-hidden');
+            btnEn.classList.add('active');
+            btnZh.classList.remove('active');
+        }
+    }
+</script>
+</body>
+</html>
